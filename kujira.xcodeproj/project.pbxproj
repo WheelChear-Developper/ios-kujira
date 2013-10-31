@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA6D7601822509B002A9473 /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6D75F1822509B002A9473 /* icon-57x57.png */; };
+		0AA6D7621822509D002A9473 /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6D7611822509D002A9473 /* icon-114x114.png */; };
+		0AA6D764182250A1002A9473 /* icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6D763182250A1002A9473 /* icon-72x72.png */; };
+		0AA6D766182250A2002A9473 /* icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6D765182250A2002A9473 /* icon-144x144.png */; };
 		0AB6A866181CB90F007EB7E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB6A865181CB90F007EB7E5 /* UIKit.framework */; };
 		0AB6A868181CB90F007EB7E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB6A867181CB90F007EB7E5 /* Foundation.framework */; };
 		0AB6A86A181CB90F007EB7E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB6A869181CB90F007EB7E5 /* CoreGraphics.framework */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AA6D75F1822509B002A9473 /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57x57.png"; sourceTree = "<group>"; };
+		0AA6D7611822509D002A9473 /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114x114.png"; sourceTree = "<group>"; };
+		0AA6D763182250A1002A9473 /* icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72x72.png"; sourceTree = "<group>"; };
+		0AA6D765182250A2002A9473 /* icon-144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144x144.png"; sourceTree = "<group>"; };
 		0AB6A862181CB90F007EB7E5 /* kujira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kujira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB6A865181CB90F007EB7E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0AB6A867181CB90F007EB7E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +97,10 @@
 		0AB6A859181CB90F007EB7E5 = {
 			isa = PBXGroup;
 			children = (
+				0AA6D765182250A2002A9473 /* icon-144x144.png */,
+				0AA6D763182250A1002A9473 /* icon-72x72.png */,
+				0AA6D7611822509D002A9473 /* icon-114x114.png */,
+				0AA6D75F1822509B002A9473 /* icon-57x57.png */,
 				0AB6A86B181CB90F007EB7E5 /* kujira */,
 				0AB6A892181CB90F007EB7E5 /* kujiraTests */,
 				0AB6A864181CB90F007EB7E5 /* Frameworks */,
@@ -240,6 +252,10 @@
 				0AB6A87C181CB90F007EB7E5 /* Default-568h@2x.png in Resources */,
 				0AB6A87F181CB90F007EB7E5 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0AB6A882181CB90F007EB7E5 /* MainStoryboard_iPad.storyboard in Resources */,
+				0AA6D7601822509B002A9473 /* icon-57x57.png in Resources */,
+				0AA6D7621822509D002A9473 /* icon-114x114.png in Resources */,
+				0AA6D764182250A1002A9473 /* icon-72x72.png in Resources */,
+				0AA6D766182250A2002A9473 /* icon-144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
