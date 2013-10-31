@@ -395,10 +395,13 @@
 		0AB6A89E181CB90F007EB7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kujira/kujira-Prefix.pch";
 				INFOPLIST_FILE = "kujira/kujira-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,10 +409,13 @@
 		0AB6A89F181CB90F007EB7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kujira/kujira-Prefix.pch";
 				INFOPLIST_FILE = "kujira/kujira-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -467,6 +473,7 @@
 				0AB6A89F181CB90F007EB7E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB6A8A0181CB90F007EB7E5 /* Build configuration list for PBXNativeTarget "kujiraTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +482,7 @@
 				0AB6A8A2181CB90F007EB7E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
