@@ -53,6 +53,16 @@
     self.view.backgroundColor = [SetColor setBackGroundColor];
 }
 
+//設定画面の再設定
+-(void)viewWillAppear:(BOOL)animated
+{
+    if([Configuration pushNotifications] == NO){
+        [Sw_PushNotificationSet setOn:NO animated:NO];
+    }else{
+        [Sw_PushNotificationSet setOn:YES animated:NO];
+    }
+}
+
 - (IBAction)Sw_PushNotificationSet:(id)sender
 {
     if([Configuration pushNotifications] == NO){
