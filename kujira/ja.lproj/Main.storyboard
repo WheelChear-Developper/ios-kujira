@@ -691,12 +691,219 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="490" id="AKG-Jm-TeF">
+                                        <rect key="frame" x="0.0" y="402" width="320" height="490"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKG-Jm-TeF" id="NAd-la-Vlj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="16X-ed-PBo">
+                                                    <rect key="frame" x="10" y="5" width="300" height="480"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_top.png" id="yXg-gj-pdN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_center.png" id="PTc-2F-HBm">
+                                                            <rect key="frame" x="0.0" y="14" width="300" height="451"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopimage2.jpg" id="A1B-vw-o5Z">
+                                                            <rect key="frame" x="20" y="247" width="260" height="178"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_buttom.png" id="agM-ja-HzM">
+                                                            <rect key="frame" x="0.0" y="463" width="300" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopimage1.jpg" id="0h3-Ey-1wl">
+                                                            <rect key="frame" x="20" y="35" width="260" height="178"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I7M-9N-Cix">
+                                                            <rect key="frame" x="20" y="211" width="260" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-1" maxX="0.0" maxY="1"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="まだご存知ない方もいらっしゃるかも知れませんが…実は、個室もあるんです。">
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <font key="NSFont" size="12" name="HiraKakuProN-W3"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YmF-92-Pd2">
+                                                            <rect key="frame" x="20" y="426" width="260" height="46"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-1" maxX="0.0" maxY="1"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="高い天井やオープンキッチンが開放的◎古木をふんだんに使った1Fは、どこかレトロであたたかい雰囲気。">
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <font key="NSFont" size="12" name="HiraKakuProN-W3"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こだわりの空間づくり" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kIw-gz-2O8">
+                                                            <rect key="frame" x="31" y="5" width="238" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
+                                                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="クーポン" id="fXt-JW-DeA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="400" id="FqM-Ol-tCC">
+                                        <rect key="frame" x="0.0" y="914" width="320" height="400"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FqM-Ol-tCC" id="CUU-j8-eMR">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="FeQ-gF-gnC">
+                                                    <rect key="frame" x="10" y="5" width="300" height="400"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_top.png" id="DNP-SQ-Q5q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_center.png" id="7zY-Pg-A7e">
+                                                            <rect key="frame" x="0.0" y="13" width="300" height="361"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_buttom.png" id="LyD-6y-wRf">
+                                                            <rect key="frame" x="0.0" y="374" width="300" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yWt-Jl-wk8">
+                                                            <rect key="frame" x="20" y="6" width="260" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
+                                                            <string key="text">【下記コース併用ＯＫ！！】
+　日～木曜限定！！ &lt;飲放&gt;30分延長★</string>
+                                                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QeV-HT-i8W">
+                                                            <rect key="frame" x="20" y="45" width="260" height="82"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment>
+                                                                    <string key="content">【提示条件】予約時
+【利用条件】
+
+※2名様～／他券併用不可／
+カード使用不可/祝前・金・土使用不可／
+10％・5％割引とは併用不可</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <font key="NSFont" size="12" name="HiraKakuProN-W3"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SNa-Pu-wUo">
+                                                            <rect key="frame" x="20" y="133" width="260" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
+                                                            <string key="text">【飲み放題つき】コース
+　[1]3000円 [2]3500円 [3]4000円</string>
+                                                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SnU-Vn-RAO">
+                                                            <rect key="frame" x="20" y="166" width="260" height="106"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment>
+                                                                    <string key="content">【提示条件】予約時
+　　(前日まで／当日はお問い合わせを)
+【利用条件】
+
+※NET予約の際はコース番号をご選択下さい／
+飲み放題は2時間(ラストオーダー90分)／
+2名様～／他券併用不可</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <font key="NSFont" size="12" name="HiraKakuProN-W3"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LlY-bA-x3U">
+                                                            <rect key="frame" x="20" y="269" width="260" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
+                                                            <string key="text">★お会計より10％OFF★ 
+　※金・土・祝前日は5％OFF</string>
+                                                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9aD-Ti-rT6">
+                                                            <rect key="frame" x="20" y="308" width="260" height="70"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment>
+                                                                    <string key="content">【提示条件】入店時
+【利用条件】
+
+※コース利用不可／2名様～／他券併用不可／カード利用不可</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <font key="NSFont" size="12" name="HiraKakuProN-W3"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="その他協賛店舗" id="vGF-Dn-boA">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="K5P-Qs-TlC">
-                                        <rect key="frame" x="0.0" y="424" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1336" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5P-Qs-TlC" id="8mK-P2-B5c">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -783,7 +990,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="j8T-uS-d1y">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -792,7 +999,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set5:" destination="klj-3D-aSR" eventType="touchUpInside" id="z99-fm-lOc"/>
+                                                        <action selector="btn_set1:" destination="klj-3D-aSR" eventType="touchUpInside" id="Kwy-tp-38s"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="mBh-8s-VhH"/>
                                                     </connections>
                                                 </button>
@@ -802,7 +1009,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="aqp-ac-Y3m">
-                                        <rect key="frame" x="0.0" y="574" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1486" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aqp-ac-Y3m" id="aTy-7k-IiB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -859,7 +1066,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="idk-sa-NFT">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -868,7 +1075,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set1:" destination="klj-3D-aSR" eventType="touchUpInside" id="ZvY-S1-OtV"/>
+                                                        <action selector="btn_set2:" destination="klj-3D-aSR" eventType="touchUpInside" id="uDc-IO-CV1"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="yuN-sx-UTs"/>
                                                     </connections>
                                                 </button>
@@ -878,7 +1085,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="SuR-Xl-Fge">
-                                        <rect key="frame" x="0.0" y="724" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1636" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuR-Xl-Fge" id="9pb-CS-4yH">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -934,7 +1141,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K7m-0S-6Wh">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -943,7 +1150,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set2:" destination="klj-3D-aSR" eventType="touchUpInside" id="OQV-aP-TYm"/>
+                                                        <action selector="btn_set3:" destination="klj-3D-aSR" eventType="touchUpInside" id="PJF-Hb-xnB"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="oBp-E1-4aI"/>
                                                     </connections>
                                                 </button>
@@ -953,7 +1160,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="ew8-uh-2Bp">
-                                        <rect key="frame" x="0.0" y="874" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1786" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ew8-uh-2Bp" id="Bpk-mP-BF9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1023,7 +1230,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a84-To-h8L">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1032,7 +1239,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set3:" destination="klj-3D-aSR" eventType="touchUpInside" id="ihN-jv-Q28"/>
+                                                        <action selector="btn_set4:" destination="klj-3D-aSR" eventType="touchUpInside" id="Plp-mj-FXi"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="5Vj-38-QsH"/>
                                                     </connections>
                                                 </button>
@@ -1042,7 +1249,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="NN7-iI-4lq">
-                                        <rect key="frame" x="0.0" y="1024" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1936" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NN7-iI-4lq" id="aQz-f2-C0A">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1112,7 +1319,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oFt-qS-CnX">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1121,7 +1328,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set4:" destination="klj-3D-aSR" eventType="touchUpInside" id="FPQ-c6-PGi"/>
+                                                        <action selector="btn_set5:" destination="klj-3D-aSR" eventType="touchUpInside" id="D47-e8-Hdy"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="0gI-Vc-rQp"/>
                                                     </connections>
                                                 </button>
@@ -1131,7 +1338,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="MTW-vx-o7a">
-                                        <rect key="frame" x="0.0" y="1174" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2086" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MTW-vx-o7a" id="yVU-qI-lcm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1179,7 +1386,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gq2-Fd-luJ">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1188,7 +1395,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set7:" destination="klj-3D-aSR" eventType="touchUpInside" id="50h-B4-YaI"/>
+                                                        <action selector="btn_set6:" destination="klj-3D-aSR" eventType="touchUpInside" id="xtt-Ok-tdD"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="dLu-qu-5N9"/>
                                                     </connections>
                                                 </button>
@@ -1198,7 +1405,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="VeV-xV-j8e">
-                                        <rect key="frame" x="0.0" y="1324" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2236" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VeV-xV-j8e" id="GpS-5f-prf">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1253,7 +1460,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QTj-pP-p4k">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1262,7 +1469,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set6:" destination="klj-3D-aSR" eventType="touchUpInside" id="GCe-Bk-f3v"/>
+                                                        <action selector="btn_set7:" destination="klj-3D-aSR" eventType="touchUpInside" id="gOU-kI-GjT"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="WKJ-gX-y08"/>
                                                     </connections>
                                                 </button>
@@ -1272,7 +1479,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="TQz-H8-An2">
-                                        <rect key="frame" x="0.0" y="1474" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2386" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TQz-H8-An2" id="Bmg-NI-Flw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1359,7 +1566,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rlQ-T1-nqj">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1368,7 +1575,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set8:" destination="klj-3D-aSR" eventType="touchUpInside" id="uZd-4v-g3U"/>
+                                                        <action selector="btn_set8:" destination="klj-3D-aSR" eventType="touchUpInside" id="gkW-YD-gvd"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="32X-bu-Jsx"/>
                                                     </connections>
                                                 </button>
@@ -1378,7 +1585,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="JIF-dW-pAm">
-                                        <rect key="frame" x="0.0" y="1624" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2536" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JIF-dW-pAm" id="7iz-md-XVb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1486,7 +1693,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oh9-gO-X6a">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1495,7 +1702,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set9:" destination="klj-3D-aSR" eventType="touchUpInside" id="3VE-jg-ykA"/>
+                                                        <action selector="btn_set9:" destination="klj-3D-aSR" eventType="touchUpInside" id="Xa4-Fd-iDZ"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="RRz-BE-Rge"/>
                                                     </connections>
                                                 </button>
@@ -1505,7 +1712,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="91f-cI-aNB">
-                                        <rect key="frame" x="0.0" y="1774" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2686" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="91f-cI-aNB" id="YcA-E3-nmi">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1575,7 +1782,7 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mPI-BK-scl">
-                                                    <rect key="frame" x="29" y="116" width="262" height="21"/>
+                                                    <rect key="frame" x="29" y="116" width="262" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-3" maxX="0.0" maxY="3"/>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
@@ -1584,7 +1791,7 @@ Cg
                                                         <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btn_set10:" destination="klj-3D-aSR" eventType="touchUpInside" id="4OS-45-UKf"/>
+                                                        <action selector="btn_set10:" destination="klj-3D-aSR" eventType="touchUpInside" id="9N3-Cj-a05"/>
                                                         <segue destination="CEs-cV-XLU" kind="push" id="w1s-Z0-JZ2"/>
                                                     </connections>
                                                 </button>
@@ -2181,6 +2388,8 @@ Cg
         <image name="screen4.png" width="640" height="1136"/>
         <image name="screen5.png" width="640" height="1136"/>
         <image name="shop_30x30.png" width="30" height="30"/>
+        <image name="shopimage1.jpg" width="238" height="178"/>
+        <image name="shopimage2.jpg" width="178" height="238"/>
         <image name="twitter-icon.png" width="30" height="30"/>
         <image name="waku_1line.png" width="300" height="43"/>
         <image name="waku_set_buttom.png" width="300" height="15"/>
@@ -2194,6 +2403,6 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yuN-sx-UTs"/>
+        <segue reference="oBp-E1-4aI"/>
     </inferredMetricsTieBreakers>
 </document>

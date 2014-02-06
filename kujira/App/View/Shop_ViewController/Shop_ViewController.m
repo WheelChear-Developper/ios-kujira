@@ -74,6 +74,9 @@
         case 2:{
             return 44;
         }
+        case 3:{
+            return 44;
+        }
         default:{
             return 0;
             break;
@@ -103,6 +106,12 @@
             break;
         }
         case 2:{
+            [headerView addSubview:headerImageView];
+            title.text = @"アプリクーポン";
+            [headerView addSubview:title];
+            break;
+        }
+        case 3:{
             [headerView addSubview:headerImageView];
             title.text = @"その他協賛店舗";
             [headerView addSubview:title];
@@ -159,7 +168,7 @@
 
 - (IBAction)btn_set8:(id)sender
 {
-    [Configuration setWebURL:@"http://kaatsu-clubgroup.akafune.com/"];
+    [Configuration setWebURL:@"http://kaatsu-club-group.akafune.com/"];
 }
 
 - (IBAction)btn_set9:(id)sender
