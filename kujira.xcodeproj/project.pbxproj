@@ -80,7 +80,6 @@
 		D142068318A1DC91007D1C5A /* screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066418A1DC91007D1C5A /* screen2.png */; };
 		D142068418A1DC91007D1C5A /* screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066518A1DC91007D1C5A /* screen3.png */; };
 		D142068518A1DC91007D1C5A /* screen4.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066618A1DC91007D1C5A /* screen4.png */; };
-		D142068618A1DC91007D1C5A /* screen5.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066718A1DC91007D1C5A /* screen5.png */; };
 		D142068718A1DC91007D1C5A /* facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066918A1DC91007D1C5A /* facebook-icon.png */; };
 		D142068818A1DC91007D1C5A /* line-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066A18A1DC91007D1C5A /* line-icon.png */; };
 		D142068918A1DC91007D1C5A /* twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D142066B18A1DC91007D1C5A /* twitter-icon.png */; };
@@ -227,7 +226,6 @@
 		D142066418A1DC91007D1C5A /* screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen2.png; sourceTree = "<group>"; };
 		D142066518A1DC91007D1C5A /* screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen3.png; sourceTree = "<group>"; };
 		D142066618A1DC91007D1C5A /* screen4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen4.png; sourceTree = "<group>"; };
-		D142066718A1DC91007D1C5A /* screen5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen5.png; sourceTree = "<group>"; };
 		D142066918A1DC91007D1C5A /* facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-icon.png"; sourceTree = "<group>"; };
 		D142066A18A1DC91007D1C5A /* line-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line-icon.png"; sourceTree = "<group>"; };
 		D142066B18A1DC91007D1C5A /* twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-icon.png"; sourceTree = "<group>"; };
@@ -671,7 +669,6 @@
 				D142066418A1DC91007D1C5A /* screen2.png */,
 				D142066518A1DC91007D1C5A /* screen3.png */,
 				D142066618A1DC91007D1C5A /* screen4.png */,
-				D142066718A1DC91007D1C5A /* screen5.png */,
 			);
 			path = screen_shot;
 			sourceTree = "<group>";
@@ -820,7 +817,6 @@
 				D142067E18A1DC91007D1C5A /* navibar_320x44.png in Resources */,
 				D142067A18A1DC91007D1C5A /* icon_72x72.png in Resources */,
 				D142069318A1DCEA007D1C5A /* InfoPlist.strings in Resources */,
-				D142068618A1DC91007D1C5A /* screen5.png in Resources */,
 				D142068418A1DC91007D1C5A /* screen3.png in Resources */,
 				D142067518A1DC91007D1C5A /* icon_114x114.png in Resources */,
 				D142060418A1DC6A007D1C5A /* Default-568h@2x.png in Resources */,

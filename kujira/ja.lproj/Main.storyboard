@@ -2133,7 +2133,7 @@ Cg
                                                     <rect key="frame" x="31" y="418" width="258" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="-5" maxX="0.0" maxY="5"/>
-                                                    <string key="text">いぬいのいろいろなお得
+                                                    <string key="text">くじら両国橋店のいろいろなお得
 情報を確認できます。</string>
                                                     <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2199,7 +2199,7 @@ Cg
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen3.png" id="8ZN-rt-5Ou">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen2.png" id="8ZN-rt-5Ou">
                                                     <rect key="frame" x="24" y="59" width="272" height="356"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -2268,7 +2268,7 @@ Cg
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen4.png" id="pFP-bW-vr0">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen3.png" id="pFP-bW-vr0">
                                                     <rect key="frame" x="24" y="59" width="272" height="356"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -2329,7 +2329,7 @@ Cg
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen5.png" id="H8W-QI-Y6C">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen4.png" id="H8W-QI-Y6C">
                                                     <rect key="frame" x="24" y="59" width="272" height="356"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -2388,9 +2388,9 @@ Cg
         <image name="news_30x30.png" width="30" height="30"/>
         <image name="recommend_30x30.png" width="30" height="30"/>
         <image name="screen1.png" width="640" height="1136"/>
+        <image name="screen2.png" width="640" height="1136"/>
         <image name="screen3.png" width="640" height="1136"/>
         <image name="screen4.png" width="640" height="1136"/>
-        <image name="screen5.png" width="640" height="1136"/>
         <image name="shop_30x30.png" width="30" height="30"/>
         <image name="shopimage0.jpg" width="1136" height="935"/>
         <image name="shopimage1.jpg" width="238" height="178"/>
