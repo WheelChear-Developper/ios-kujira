@@ -98,6 +98,7 @@
 		D14206A118A22783007D1C5A /* waku_1line.png in Resources */ = {isa = PBXBuildFile; fileRef = D14206A018A22783007D1C5A /* waku_1line.png */; };
 		D1BE522E18A338A7003BE9A1 /* shopimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1BE522C18A338A7003BE9A1 /* shopimage1.jpg */; };
 		D1BE522F18A338A7003BE9A1 /* shopimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1BE522D18A338A7003BE9A1 /* shopimage2.jpg */; };
+		D1CF5DD218A4733D004B3A4F /* shopimage0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1CF5DD118A4733D004B3A4F /* shopimage0.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,7 @@
 		D14206A018A22783007D1C5A /* waku_1line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waku_1line.png; sourceTree = "<group>"; };
 		D1BE522C18A338A7003BE9A1 /* shopimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopimage1.jpg; sourceTree = "<group>"; };
 		D1BE522D18A338A7003BE9A1 /* shopimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopimage2.jpg; sourceTree = "<group>"; };
+		D1CF5DD118A4733D004B3A4F /* shopimage0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopimage0.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,6 +701,7 @@
 		D1BE522B18A338A7003BE9A1 /* shopimage */ = {
 			isa = PBXGroup;
 			children = (
+				D1CF5DD118A4733D004B3A4F /* shopimage0.jpg */,
 				D1BE522C18A338A7003BE9A1 /* shopimage1.jpg */,
 				D1BE522D18A338A7003BE9A1 /* shopimage2.jpg */,
 			);
@@ -795,6 +798,7 @@
 				D14206A118A22783007D1C5A /* waku_1line.png in Resources */,
 				D142060518A1DC6A007D1C5A /* Default.png in Resources */,
 				D142068918A1DC91007D1C5A /* twitter-icon.png in Resources */,
+				D1CF5DD218A4733D004B3A4F /* shopimage0.jpg in Resources */,
 				D142067918A1DC91007D1C5A /* icon_57x57.png in Resources */,
 				D142069F18A22083007D1C5A /* shop_30x30.png in Resources */,
 				D142067C18A1DC91007D1C5A /* menubar.png in Resources */,

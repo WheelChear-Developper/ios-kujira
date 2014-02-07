@@ -576,7 +576,7 @@
             <objects>
                 <tableViewController id="klj-3D-aSR" customClass="Shop_ViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V1y-C4-Bps">
-                        <rect key="frame" x="0.0" y="64" width="320" height="2000"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -596,15 +596,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="店舗情報" id="bHZ-hK-0Ha">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="370" id="yHz-uP-ato">
-                                        <rect key="frame" x="0.0" y="32" width="320" height="370"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="570" id="yHz-uP-ato">
+                                        <rect key="frame" x="0.0" y="32" width="320" height="570"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yHz-uP-ato" id="8MD-Ul-4vW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="570"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="cgu-Oo-nUO">
-                                                    <rect key="frame" x="10" y="5" width="300" height="360"/>
+                                                    <rect key="frame" x="10" y="5" width="300" height="560"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_top.png" id="GIo-l8-p5G">
@@ -613,24 +613,28 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_center.png" id="2wo-gt-48P">
-                                                            <rect key="frame" x="0.0" y="13" width="300" height="331"/>
+                                                            <rect key="frame" x="0.0" y="13" width="300" height="531"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waku_set_buttom.png" id="nmS-eo-mtM">
-                                                            <rect key="frame" x="0.0" y="344" width="300" height="15"/>
+                                                            <rect key="frame" x="0.0" y="544" width="300" height="15"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopimage0.jpg" id="lDb-Ww-ce3">
+                                                            <rect key="frame" x="19" y="20" width="260" height="178"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEL：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jhu-ZK-nKC">
-                                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                                            <rect key="frame" x="20" y="208" width="42" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="13"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="obv-2V-eDQ">
-                                                            <rect key="frame" x="59" y="11" width="126" height="21"/>
+                                                            <rect key="frame" x="59" y="208" width="126" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
@@ -642,42 +646,42 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所：徳島県徳島市両国橋11-2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v2B-fi-xmK">
-                                                            <rect key="frame" x="20" y="32" width="272" height="21"/>
+                                                            <rect key="frame" x="20" y="229" width="272" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アクセス：アクティ21より徒歩3分分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zLK-s2-mvx">
-                                                            <rect key="frame" x="20" y="53" width="272" height="21"/>
+                                                            <rect key="frame" x="20" y="253" width="272" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="13"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:30～翌1:00（ラストオーダー翌0:30）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D0J-le-HY3">
-                                                            <rect key="frame" x="20" y="95" width="272" height="21"/>
+                                                            <rect key="frame" x="20" y="295" width="272" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="営業時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3FJ-ym-Hj7">
-                                                            <rect key="frame" x="20" y="74" width="272" height="21"/>
+                                                            <rect key="frame" x="20" y="274" width="272" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定休日：不定休" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kUF-dd-gpd">
-                                                            <rect key="frame" x="20" y="117" width="272" height="21"/>
+                                                            <rect key="frame" x="20" y="317" width="272" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1ds-tu-Xgc">
-                                                            <rect key="frame" x="19" y="142" width="262" height="202"/>
+                                                            <rect key="frame" x="19" y="342" width="262" height="202"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="klj-3D-aSR" id="wNy-Ew-fOL"/>
@@ -692,7 +696,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="490" id="AKG-Jm-TeF">
-                                        <rect key="frame" x="0.0" y="402" width="320" height="490"/>
+                                        <rect key="frame" x="0.0" y="602" width="320" height="490"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKG-Jm-TeF" id="NAd-la-Vlj">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="490"/>
@@ -776,7 +780,7 @@
                             <tableViewSection headerTitle="クーポン" id="fXt-JW-DeA">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="400" id="FqM-Ol-tCC">
-                                        <rect key="frame" x="0.0" y="914" width="320" height="400"/>
+                                        <rect key="frame" x="0.0" y="1114" width="320" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FqM-Ol-tCC" id="CUU-j8-eMR">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
@@ -832,7 +836,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SNa-Pu-wUo">
-                                                            <rect key="frame" x="20" y="133" width="260" height="42"/>
+                                                            <rect key="frame" x="20" y="135" width="260" height="42"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <inset key="insetFor6xAndEarlier" minX="0.0" minY="-4" maxX="0.0" maxY="4"/>
                                                             <string key="text">【飲み放題つき】コース
@@ -903,7 +907,7 @@
                             <tableViewSection headerTitle="その他協賛店舗" id="vGF-Dn-boA">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="K5P-Qs-TlC">
-                                        <rect key="frame" x="0.0" y="1336" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1536" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5P-Qs-TlC" id="8mK-P2-B5c">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1009,7 +1013,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="aqp-ac-Y3m">
-                                        <rect key="frame" x="0.0" y="1486" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1686" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aqp-ac-Y3m" id="aTy-7k-IiB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1085,7 +1089,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="SuR-Xl-Fge">
-                                        <rect key="frame" x="0.0" y="1636" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1836" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuR-Xl-Fge" id="9pb-CS-4yH">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1160,7 +1164,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="ew8-uh-2Bp">
-                                        <rect key="frame" x="0.0" y="1786" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="1986" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ew8-uh-2Bp" id="Bpk-mP-BF9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1249,7 +1253,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="NN7-iI-4lq">
-                                        <rect key="frame" x="0.0" y="1936" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2136" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NN7-iI-4lq" id="aQz-f2-C0A">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1338,7 +1342,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="MTW-vx-o7a">
-                                        <rect key="frame" x="0.0" y="2086" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2286" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MTW-vx-o7a" id="yVU-qI-lcm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1405,7 +1409,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="VeV-xV-j8e">
-                                        <rect key="frame" x="0.0" y="2236" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2436" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VeV-xV-j8e" id="GpS-5f-prf">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1479,7 +1483,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="TQz-H8-An2">
-                                        <rect key="frame" x="0.0" y="2386" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2586" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TQz-H8-An2" id="Bmg-NI-Flw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1585,7 +1589,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="JIF-dW-pAm">
-                                        <rect key="frame" x="0.0" y="2536" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2736" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JIF-dW-pAm" id="7iz-md-XVb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1712,7 +1716,7 @@ Cg
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="91f-cI-aNB">
-                                        <rect key="frame" x="0.0" y="2686" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="2886" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="91f-cI-aNB" id="YcA-E3-nmi">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1814,7 +1818,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqG-NB-moT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3363" y="917"/>
+            <point key="canvasLocation" x="3368" y="193"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="8Eg-77-qyi">
@@ -2154,7 +2158,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDO-Om-7sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2419" y="3124"/>
+            <point key="canvasLocation" x="2427" y="3560"/>
         </scene>
         <!--Gaid2 View Controller-->
         <scene sceneID="2oI-w1-E01">
@@ -2227,7 +2231,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBh-aS-yki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2820" y="3124"/>
+            <point key="canvasLocation" x="2826" y="3560"/>
         </scene>
         <!--Gaid3 View Controller-->
         <scene sceneID="0u5-vR-vBL">
@@ -2300,7 +2304,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9F-D5-pyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3244" y="3124"/>
+            <point key="canvasLocation" x="3231" y="3560"/>
         </scene>
         <!--Gaid4 View Controller-->
         <scene sceneID="ud0-HE-VXP">
@@ -2373,7 +2377,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrN-a3-OyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3670" y="3124"/>
+            <point key="canvasLocation" x="3680" y="3560"/>
         </scene>
     </scenes>
     <resources>
@@ -2388,6 +2392,7 @@ Cg
         <image name="screen4.png" width="640" height="1136"/>
         <image name="screen5.png" width="640" height="1136"/>
         <image name="shop_30x30.png" width="30" height="30"/>
+        <image name="shopimage0.jpg" width="1136" height="935"/>
         <image name="shopimage1.jpg" width="238" height="178"/>
         <image name="shopimage2.jpg" width="178" height="238"/>
         <image name="twitter-icon.png" width="30" height="30"/>
