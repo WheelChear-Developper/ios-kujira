@@ -38,7 +38,7 @@
     
     // 戻るボタン設定
     UIButton *Left_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Left_Button setTitle:NSLocalizedString(@"Button_Back",@"") forState:UIControlStateNormal];
     [Left_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Left_Button addTarget:self action:@selector(btn_Return:) forControlEvents:UIControlEventTouchUpInside];
@@ -46,7 +46,7 @@
     self.navigationItem.leftBarButtonItem = Left_buttonItem;
     // 進むボタン設定
     UIButton *Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+    [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Right_Button setTitle:NSLocalizedString(@"Button_Next",@"") forState:UIControlStateNormal];
     [Right_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Right_Button addTarget:self action:@selector(btn_Next:) forControlEvents:UIControlEventTouchUpInside];

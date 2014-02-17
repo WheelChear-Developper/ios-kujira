@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     // iOS6/7でのレイアウト互換設定
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1){
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.automaticallyAdjustsScrollViewInsets = NO;
@@ -42,12 +42,13 @@
     
     // 戻るボタン設定
     Left_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Left_Button setTitle:NSLocalizedString(@"Button_Back",@"") forState:UIControlStateNormal];
     [Left_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Left_Button addTarget:self action:@selector(btn_Return:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* Left_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Left_Button];
     self.navigationItem.leftBarButtonItem = Left_buttonItem;
+    
     //BackColor
     Web_View.backgroundColor = [SetColor setRollUpBackGroundColor];
     // webview用スクロールデリゲート追加
@@ -58,7 +59,7 @@
     
     // 本体データ取得
     Web_View.scalesPageToFit = YES;
-    NSURL *url = [NSURL URLWithString:[Configuration webURL]];
+    NSURL *url = [NSURL URLWithString:[Configuration getWebURL]];
     NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy: NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60.0];
     [Web_View loadRequest:req];
 }
@@ -83,6 +84,8 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
@@ -137,7 +140,6 @@
     CGFloat positionY = Web_View.scrollView.contentOffset.y;
     NSLog(@"%.1f",positionY);
     
-    // 一番下までスクロールしたかどうか
     if(positionY < -100){
         if(bln_download == NO){
             bln_download = YES;

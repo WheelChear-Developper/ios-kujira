@@ -27,18 +27,17 @@
     [super viewDidLoad];
     
     // iOS6/7でのレイアウト互換設定
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1){
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    
     //BackColor
     self.tableView.backgroundColor = [SetColor setBackGroundColor];
-
+    
     // 戻るボタン設定
     UIButton *Left_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Left_Button setTitle:NSLocalizedString(@"Button_Back",@"") forState:UIControlStateNormal];
     [Left_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Left_Button addTarget:self action:@selector(btn_Return:) forControlEvents:UIControlEventTouchUpInside];
@@ -46,14 +45,14 @@
     self.navigationItem.leftBarButtonItem = Left_buttonItem;
     // メールボタン設定
     UIButton *Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+    [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Right_Button setTitle:NSLocalizedString(@"Button_Post",@"") forState:UIControlStateNormal];
     [Right_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Right_Button addTarget:self action:@selector(btn_Mail:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* Right_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Right_Button];
     self.navigationItem.rightBarButtonItem = Right_buttonItem;
     
-    // 背景をキリックしたら、キーボードを隠す
+    // 背景をクリックしたら、キーボードを隠す
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSoftKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
@@ -80,7 +79,6 @@
     lbl_OS = nil;
     lbl_name = nil;
     lbl_ver = nil;
-    txt_word = nil;
 }
 
 //設定画面の再設定
@@ -88,8 +86,7 @@
 {
     //ナビゲーションのバック画像設定
     // iOS6/7でのレイアウト互換設定
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1)
-    {
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
         // iOS7移行の設定
         //ナビゲーションのバック画像設定
         UIImage *image = [UIImage imageNamed:@"navibar_320x44.png"];
@@ -105,7 +102,10 @@
 
 - (void)viewDidUnload
 {
-
+    lbl_device = nil;
+    lbl_OS = nil;
+    lbl_name = nil;
+    lbl_ver = nil;
     [super viewDidUnload];
 }
 
@@ -115,6 +115,43 @@
     [self.view endEditing: YES];
 }
 
+/////////////// ↓　入力系用メソッド　↓ ////////////////////
+-(BOOL)textViewShouldBeginEditing:(UITextView*)textView
+{
+    // ホント表示を消す
+    lbl_comment_hint.hidden = YES;
+    return YES;
+}
+
+-(BOOL)textViewShouldEndEditing:(UITextView*)textView
+{
+    if(txt_comments.text.length == 0){
+        // ヒント表示表示
+        lbl_comment_hint.hidden = NO;
+    }
+    // キーボード隠す
+    [textView resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    int maxInputLength = 100;
+    
+    // 入力済みのテキストを取得
+    NSMutableString *str = [textView.text mutableCopy];
+    
+    // 入力済みのテキストと入力が行われたテキストを結合
+    [str replaceCharactersInRange:range withString:text];
+    
+    if ([str length] > maxInputLength) {
+        return NO;
+    }
+    
+    return YES;
+}
+/////////////// ↑　入力系用メソッド　↑ ////////////////////
+
 - (void)btn_Return:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -123,7 +160,7 @@
 - (void)btn_Mail:(id)sender
 {
     //キーボードを隠す
-    [txt_word resignFirstResponder];
+    [txt_comments resignFirstResponder];
     Class mail = (NSClassFromString(@"MFMailComposeViewController"));
 	if (mail != nil){
 		//メールの設定がされているかどうかチェック
@@ -140,8 +177,7 @@
 }
 
 #pragma mark アラート表示
--(void) setAlert:(NSString *) aTitle :(NSString *) aDescription
-{
+-(void) setAlert:(NSString *) aTitle :(NSString *) aDescription {
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:aTitle message:aDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 	[alert show];
 }
@@ -161,7 +197,7 @@
     // UIDeviceクラスのインスタンスを取得する
     UIDevice *dev = [UIDevice currentDevice];
     
-    NSString* str_text = txt_word.text;
+    NSString* str_text = txt_comments.text;
     if(str_text == nil){
         str_text = @"";
     }
@@ -178,8 +214,7 @@
     [self presentViewController:mailController animated:YES completion:nil];
 }
 
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
-{
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	switch (result){
 		case MFMailComposeResultCancelled:
 			//キャンセルした場合

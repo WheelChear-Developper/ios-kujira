@@ -13,24 +13,36 @@
 #pragma mark - Synchronize
 + (void)synchronize;
 
+#pragma mark - DeviceTokenKey
++ (NSString*)getDeviceTokenKey;
++ (void)setDeviceTokenKey:(NSString*)value;
+
 #pragma mark - FIRST_START
-+ (BOOL)firstStart;
++ (BOOL)getFirstStart;
 + (void)setFirstStart:(BOOL)value;
 
 #pragma mark - StartoScreen
-+ (NSInteger)startScreen;
++ (NSInteger)getStartScreen;
 + (void)setStartScreen:(NSInteger)value;
 
-#pragma mark - Topic_ID
-+ (NSInteger)topic_ID;
-+ (void)setTopic_ID:(NSInteger)value;
-
 #pragma mark - PushNotifications
-+ (BOOL)pushNotifications;
++ (BOOL)getPushNotifications;
 + (void)setPushNotifications:(BOOL)value;
 
 #pragma mark - WebURL
-+ (NSString*)webURL;
++ (NSString*)getWebURL;
 + (void)setWebURL:(NSString*)value;
+
+#pragma mark - ProfileID
++ (NSString*)getProfileID;
++ (void)setProfileID:(NSString*)value;
+
+#pragma mark - ProfileName
++ (NSString*)getProfileName;
++ (void)setProfileName:(NSString*)value;
+
+#pragma mark - ListID
++ (NSInteger)getListID;
++ (void)setListID:(NSInteger)value;
 
 @end

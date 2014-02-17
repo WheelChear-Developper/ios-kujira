@@ -27,31 +27,36 @@
 {
     [super viewDidLoad];
     
-    // iOS6/7でのレイアウト互換設定
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1){
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.extendedLayoutIncludesOpaqueBars = NO;
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
     //BackColor
     self.tableView.backgroundColor = [SetColor setBackGroundColor];
     
     // 戻るボタン設定
     UIButton *Left_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Left_Button setTitle:NSLocalizedString(@"Button_Back",@"") forState:UIControlStateNormal];
     [Left_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Left_Button addTarget:self action:@selector(btn_Return:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* Left_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Left_Button];
     self.navigationItem.leftBarButtonItem = Left_buttonItem;
     // 進むボタン設定
-    UIButton *Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
-    [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
-    [Right_Button setTitle:NSLocalizedString(@"Button_First",@"") forState:UIControlStateNormal];
-    [Right_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
-    [Right_Button addTarget:self action:@selector(btn_Next:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* Right_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Right_Button];
-    self.navigationItem.rightBarButtonItem = Right_buttonItem;
+    if([Configuration getFirstStart]){
+        //初期起動の場合
+        UIButton *Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+        [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+        [Right_Button setTitle:NSLocalizedString(@"Button_Root",@"") forState:UIControlStateNormal];
+        [Right_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
+        [Right_Button addTarget:self action:@selector(btn_Next:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem* Right_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Right_Button];
+        self.navigationItem.rightBarButtonItem = Right_buttonItem;
+    }else{
+        UIButton *Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+        [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+        [Right_Button setTitle:NSLocalizedString(@"Button_First",@"") forState:UIControlStateNormal];
+        [Right_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
+        [Right_Button addTarget:self action:@selector(btn_Next:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem* Right_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Right_Button];
+        self.navigationItem.rightBarButtonItem = Right_buttonItem;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,8 +83,13 @@
 
 - (void)btn_Next:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if([Configuration getFirstStart]){
+        //初期起動の場合
+        UIViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SASlideMenuRootViewController"];
+        [self presentViewController:viewController animated:NO completion:nil];
+    }else{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 @end
-

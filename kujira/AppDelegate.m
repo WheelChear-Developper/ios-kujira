@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  inui
+//  Kujira
 //
 //  Created by SMARTTECNO. on 2014/01/28.
 //  Copyright (c) 2014年 akafune, inc. All rights reserved.
@@ -40,6 +40,18 @@
         UIImage *image = [UIImage imageNamed:@"navibar_320x44.png"];
         [[UINavigationBar appearance] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     }
+    
+    //起動方法振り分け（初期起動・パスワード有り起動・パスワード無し起動）
+    if([Configuration getFirstStart]){
+        //初期起動の場合
+        UIViewController *mainViewController = (UIViewController *)self.window.rootViewController;
+        UIViewController *GaidViewController = [mainViewController.storyboard instantiateViewControllerWithIdentifier:@"FirstGaidView"];
+        self.window.rootViewController = GaidViewController;
+        [self.window makeKeyAndVisible];
+    }else{
+        //起動View変更
+    }
+    
     return YES;
 }
 
@@ -88,6 +100,23 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 didFailToRegisterForRemoteNotificationsWithError:(NSError*)err
 {
     NSLog(@"Error in registration: %@", err);
+    
+    // デバイストークン取得確認
+    if([[Configuration getDeviceTokenKey] isEqualToString:@""]){
+        // デバイストークン取得エラー表示
+        errAlert_exit = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_API_NotConnectTitleMsg",@"")
+                                                   message:nil
+                                                  delegate:self
+                                         cancelButtonTitle:NSLocalizedString(@"Dialog_API_NotConnectMsg",@"")
+                                         otherButtonTitles:nil];
+        [errAlert_exit show];
+    }else{
+        // デバイストークンからユーザー情報取得
+        NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), [Configuration getDeviceTokenKey]];
+        NSURL *URL_STRING = [NSURL URLWithString:str_URL];
+        NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
+        connection2 = [NSURLConnection connectionWithRequest:dev_request delegate:self];
+    }
 }
 
 - (void)application:(UIApplication *)app
@@ -99,24 +128,92 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
 // デバイストークンの登録
 - (void)sendProviderDeviceToken:(NSString *)deviceToken
 {
+    // デバイストークン保存(アプリ用)
+    [Configuration setDeviceTokenKey:deviceToken];
+    
+    ////////// テスト用 ////////////////
+    // デバイストークン保存(アプリ用)
+    // デバイス取得できない場合は、エミュレータかバンドルの不整合なので、テストキーを作成
+    [Configuration setDeviceTokenKey:@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx001"];
+    ////////// テスト用 ////////////////
+    
     // デバイストークン保存(サーバー用)
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://kujira.akafune.com/apns_devices"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://inui.akafune.com/apns_devices"]];
     NSString *requestBody = [@"apns_device[token]=" stringByAppendingString:deviceToken];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
-    NSURLConnection *connection =
-    [NSURLConnection connectionWithRequest:request delegate:self];
-    if (connection) {
-        // start loading
+    connection1 = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    // デバイストークンからユーザー情報取得
+    NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), deviceToken];
+    NSURL *URL_STRING = [NSURL URLWithString:str_URL];
+    NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
+    connection2 = [NSURLConnection connectionWithRequest:dev_request delegate:self];
+}
+
+///////////////////////// ↓　通信用メソッド　↓　//////////////////////////////
+//通信開始時に呼ばれる
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    //初期化
+    self.mData = [NSMutableData data];
+}
+
+//通信中常に呼ばれる
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    //通信したデータを入れていきます
+    [self.mData appendData:data];
+}
+
+//通信終了時に呼ばれる
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    if(connection2){
+        NSError *error = nil;
+        //値の取得
+        id json = [NSJSONSerialization JSONObjectWithData:self.mData options:NSJSONReadingAllowFragments error:&error];
+        NSMutableArray *jsonParser = (NSMutableArray*)json;
+        
+        //        NSLog(@"ユーザー情報取得 = %@",jsonParser);
+        // プロファイルID設定
+        [Configuration setProfileID:[jsonParser valueForKeyPath:@"id"]];
+        // プロファイル名設定
+        [Configuration setProfileName:[jsonParser valueForKeyPath:@"name"]];
     }
 }
+
+//通信エラー時に呼ばれる
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    // 通信エラーメッセージ表示
+    errAlert_exit = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_API_NotConnectTitleMsg",@"")
+                                               message:nil
+                                              delegate:self
+                                     cancelButtonTitle:NSLocalizedString(@"Dialog_API_NotConnectMsg",@"")
+                                     otherButtonTitles:nil];
+    [errAlert_exit show];
+}
+
+// アラートのボタンが押された時に呼ばれるデリゲート例文
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(alertView == errAlert_exit){
+        switch (buttonIndex) {
+            case 0:
+                exit(0);
+                break;
+        }
+    }
+}
+///////////////////////// ↑　通信用メソッド　↑　//////////////////////////////
 
 // フォアグラウンドかスタンバイのプッシュ通知からの起動
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     if (application.applicationState == UIApplicationStateActive){
-        if([Configuration pushNotifications]){
+        if([Configuration getPushNotifications]){
             // 通信エラーメッセージ表示
             UIAlertView *errAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_SiteReupMsg",@"")
                                                                message:nil

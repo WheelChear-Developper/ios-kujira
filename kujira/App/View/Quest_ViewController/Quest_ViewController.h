@@ -13,8 +13,9 @@
 
 @interface Quest_ViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 {
-    IBOutlet UITextField *txt_word;
-
+    __weak IBOutlet UITextView *txt_comments;
+    __weak IBOutlet UILabel *lbl_comment_hint;
+    
     IBOutlet UILabel *lbl_device;
     IBOutlet UILabel *lbl_OS;
     IBOutlet UILabel *lbl_name;

@@ -42,7 +42,7 @@
     
     // 戻るボタン設定
     Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Right_Button.titleLabel setFont:[UIFont systemFontOfSize:18]];
+    [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [Right_Button setTitle:NSLocalizedString(@"Button_Back",@"") forState:UIControlStateNormal];
     [Right_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
     [Right_Button addTarget:self action:@selector(btn_Return:) forControlEvents:UIControlEventTouchUpInside];
@@ -61,8 +61,9 @@
     
     // 本体データ取得
     Web_View.scalesPageToFit = YES;
-    NSURL *url = [NSURL URLWithString:[Configuration webURL]];
-    NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy: NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60.0];
+    NSString *str_URL = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_MenuURL",@"")];
+    NSURL *URL_STRING = [NSURL URLWithString:str_URL];
+    NSURLRequest *req = [NSURLRequest requestWithURL:URL_STRING cachePolicy: NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60.0];
     [Web_View loadRequest:req];
 }
 
@@ -141,8 +142,7 @@
     CGFloat positionY = Web_View.scrollView.contentOffset.y;
     NSLog(@"%.1f",positionY);
     
-    // 一番下までスクロールしたかどうか
-    if(positionY < -50){
+    if(positionY < -100){
         if(bln_download == NO){
             bln_download = YES;
             [Web_View reload];

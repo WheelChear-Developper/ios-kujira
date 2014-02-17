@@ -18,11 +18,6 @@
     NSMutableArray *_TotalDataBox;
     // スクロールダウンの再読み込みフラグ
     BOOL bln_TableReLoad;
-    BOOL bln_WebReLoad;
-    // 最初のサイトURL
-    NSString *str_FirstURL;
-    
-    UILabel *service_title;
 }
 @end
 
@@ -63,10 +58,6 @@
     
     // Register CustomCell
     [Table_View registerNib:nib forCellReuseIdentifier:@"News_Cell"];
-    
-    // リストデータの読み込み
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Progress_Reading",@"")];
-    [self readWebData];
 }
 
 // 終了処理
@@ -86,6 +77,10 @@
 // 起動・再開の時に起動するメソッド
 - (void)viewWillAppear:(BOOL)animated
 {
+    // リストデータの読み込み
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Progress_Reading",@"")];
+    [self readWebData];
+    
     [super viewWillAppear:animated];
 }
 
@@ -129,7 +124,7 @@
         NewsView_ListDataModel *listDataModel = _TotalDataBox[row];
         
         // ラベルの高さ取得
-        CGFloat flt_height = [UILabel xx_estimatedHeight:[UIFont fontWithName:@"HiraKakuProN-W3" size:13]
+        CGFloat flt_height = [UILabel xx_estimatedHeight:[UIFont systemFontOfSize:13]
                                                     text:listDataModel.service_body size:CGSizeMake(255, MAXFLOAT)];
         flt_height += 15 * 2;
         
@@ -140,11 +135,11 @@
         }
         
         if([listDataModel.service_imageUrl isEqual:@"<null>"]){
-            return 55 + flt_height + 15;
+            return 55 + flt_height + 15 + 33;
         }else if([listDataModel.service_imageUrl isEqual:[NSNull null]]){
-            return 55 + flt_height + 15;
+            return 55 + flt_height + 15 + 33;
         }else{
-            return 55 + flt_height + 200 + 15;
+            return 55 + flt_height + 200 + 15 + 33 + 5;
         }
     }
     return 0;
@@ -163,6 +158,7 @@
     // Set contents
     NSUInteger row = (NSUInteger)indexPath.row;
     NewsView_ListDataModel *listDataModel = _TotalDataBox[row];
+    cell.int_commentCount = listDataModel.service_id;
     cell.lbl_hyoudai.text = listDataModel.service_title;
     cell.lbl_date.text = listDataModel.service_retime;
     cell.str_comment = listDataModel.service_body;
@@ -195,7 +191,12 @@
 //セルの選択時イベントメソッド
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NewsView_ListDataModel *listDataModel = _TotalDataBox[indexPath.row];
+    // 選択リスト設定
+    [Configuration setListID:listDataModel.service_id];
+    // 画面遷移
+    UIViewController *initialViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comments"];
+    [self.navigationController pushViewController:initialViewController animated:YES];
 }
 
 // テーブルのスクロール時のイベントメソッド
@@ -226,11 +227,10 @@
     // リストデータの初期化
     _TotalDataBox = [[NSMutableArray alloc] init];
     
-    // 指定URL
-    NSString *url = NSLocalizedString(@"Service_NewsUrl",@"");
-    NSURL *URL_STRING = [NSURL URLWithString:url];
+    // ニュース取得
+    NSString *str_URL = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_NewsURL",@"")];
+    NSURL *URL_STRING = [NSURL URLWithString:str_URL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL_STRING];
-    // 通信開始
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
@@ -254,10 +254,9 @@
     NSError *error = nil;
     //値の取得
     id json = [NSJSONSerialization JSONObjectWithData:self.mData options:NSJSONReadingAllowFragments error:&error];
-    //NSDictinaryがNSArrayになって返ってきます(id の中に入る)
     NSMutableArray *jsonParser = (NSMutableArray*)json;
     
-//    NSLog(@"ニュース一覧取得用 = %@",jsonParser);
+    //    NSLog(@"ニュース一覧取得用 = %@",jsonParser);
     
     ///////////////// テストデータ スタート ///////////////////////
     /*
@@ -271,7 +270,7 @@
      [jsonParser addObject:jsonParser1];
      }
      //     NSLog(@"%@",jsonParser);
-    */
+     */
     ///////////////// テストデータ エンド ///////////////////////
     
     NSMutableArray *RecordDataBox = [SqlManager Get_ServiceList];

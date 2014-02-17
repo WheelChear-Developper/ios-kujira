@@ -16,8 +16,7 @@
     // テーブルビュー
     IBOutlet UITableView *Table_View;
 }
-
 @property (nonatomic,strong) SASlideMenuViewController* menuController;
 @property (nonatomic,retain)NSMutableData *mData;
-
 @end
+

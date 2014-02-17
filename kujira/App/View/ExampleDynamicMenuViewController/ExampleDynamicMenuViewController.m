@@ -13,10 +13,8 @@
 #import "Setting_ViewController.h"
 
 @interface ExampleDynamicMenuViewController ()<SASlideMenuDataSource,SASlideMenuDelegate, UITableViewDataSource>
-
 @property (nonatomic) CGFloat selectedHue;
 @property (nonatomic) CGFloat selectedBrightness;
-
 @end
 
 @implementation ExampleDynamicMenuViewController
@@ -28,7 +26,7 @@
     if (self = [super initWithCoder:aDecoder])
     {
         self.selectedBrightness = 0.3;
-        self.selectedHue = 0.0;        
+        self.selectedHue = 0.0;
     }
     return self;
 }
@@ -40,6 +38,9 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    // 初期起動フラグ設定
+    [Configuration setFirstStart:NO];
     
     // iOS6/7でのレイアウト互換設定
     if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1){
@@ -116,7 +117,7 @@
 
 -(Boolean) disableContentViewControllerCachingForIndexPath:(NSIndexPath *)indexPath
 {
-       return YES;
+    return YES;
 }
 
 -(Boolean) hasRightMenuForIndexPath:(NSIndexPath *)indexPath
@@ -160,7 +161,7 @@
 }
 -(void) slideMenuDidSlideToSide:(UINavigationController *)selectedContent
 {
-    NSLog(@"slideMenuDidSlideToSide");    
+    NSLog(@"slideMenuDidSlideToSide");
 }
 -(void) slideMenuWillSlideOut:(UINavigationController *)selectedContent
 {
@@ -172,11 +173,11 @@
 }
 -(void) slideMenuWillSlideToLeft:(UINavigationController *)selectedContent
 {
-    NSLog(@"slideMenuWillSlideToLeft");    
+    NSLog(@"slideMenuWillSlideToLeft");
 }
 -(void) slideMenuDidSlideToLeft:(UINavigationController *)selectedContent
 {
     NSLog(@"slideMenuDidSlideToLeft");
 }
- 
+
 @end

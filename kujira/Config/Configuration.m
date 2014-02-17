@@ -16,9 +16,23 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+#pragma mark - DeviceTokenKey
+static NSString *CONFIGURATION_PUSH_DEVICETOKENKEY = @"Configuration.DeviceTokenKey";
++ (NSString*)getDeviceTokenKey
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults registerDefaults:@{CONFIGURATION_PUSH_DEVICETOKENKEY : @("")}];
+    return [userDefaults stringForKey:CONFIGURATION_PUSH_DEVICETOKENKEY];
+}
++ (void)setDeviceTokenKey:(NSString*)value
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:value forKey:CONFIGURATION_PUSH_DEVICETOKENKEY];
+}
+
 #pragma mark - Setting
 static NSString *CONFIGURATION_FIRST_START = @"Configuration.FirstStart";
-+ (BOOL)firstStart
++ (BOOL)getFirstStart
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:@{CONFIGURATION_FIRST_START : @(YES)}];
@@ -30,9 +44,9 @@ static NSString *CONFIGURATION_FIRST_START = @"Configuration.FirstStart";
     [userDefaults setBool:value forKey:CONFIGURATION_FIRST_START];
 }
 
-#pragma mark - StartoScreen
-static NSString *CONFIGURATION_STARTSCREEN = @"Configuration.StartoScreen";
-+ (NSInteger)startScreen;
+#pragma mark - StartScreen
+static NSString *CONFIGURATION_STARTSCREEN = @"Configuration.StartScreen";
++ (NSInteger)getStartScreen;
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:@{CONFIGURATION_STARTSCREEN : @(0)}];
@@ -44,23 +58,9 @@ static NSString *CONFIGURATION_STARTSCREEN = @"Configuration.StartoScreen";
     [userDefaults setInteger:value forKey:CONFIGURATION_STARTSCREEN];
 }
 
-#pragma mark - Topic_ID
-static NSString *CONFIGURATION_TOPIC_ID = @"Configuration.Topic_ID";
-+ (NSInteger)topic_ID;
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults registerDefaults:@{CONFIGURATION_TOPIC_ID : @(0)}];
-    return [userDefaults integerForKey:CONFIGURATION_TOPIC_ID];
-}
-+ (void)setTopic_ID:(NSInteger)value
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setInteger:value forKey:CONFIGURATION_TOPIC_ID];
-}
-
 #pragma mark - PushNotifications
 static NSString *CONFIGURATION_PUSH_NOTIFICATIONS = @"Configuration.PushNotifications";
-+ (BOOL)pushNotifications
++ (BOOL)getPushNotifications
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:@{CONFIGURATION_PUSH_NOTIFICATIONS : @(YES)}];
@@ -74,7 +74,7 @@ static NSString *CONFIGURATION_PUSH_NOTIFICATIONS = @"Configuration.PushNotifica
 
 #pragma mark - WebURL
 static NSString *CONFIGURATION_PUSH_WEBURL = @"Configuration.WebURL";
-+ (NSString*)webURL
++ (NSString*)getWebURL
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:@{CONFIGURATION_PUSH_WEBURL : @("")}];
@@ -84,6 +84,48 @@ static NSString *CONFIGURATION_PUSH_WEBURL = @"Configuration.WebURL";
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:value forKey:CONFIGURATION_PUSH_WEBURL];
+}
+
+#pragma mark - ProfileID
+static NSString *CONFIGURATION_PUSH_PROFILEID = @"Configuration.ProfileID";
++ (NSString*)getProfileID
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults registerDefaults:@{CONFIGURATION_PUSH_PROFILEID : @("")}];
+    return [userDefaults stringForKey:CONFIGURATION_PUSH_PROFILEID];
+}
++ (void)setProfileID:(NSString*)value
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:value forKey:CONFIGURATION_PUSH_PROFILEID];
+}
+
+#pragma mark - ProfileName
+static NSString *CONFIGURATION_PUSH_PROFILENAME = @"Configuration.ProfileName";
++ (NSString*)getProfileName
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults registerDefaults:@{CONFIGURATION_PUSH_PROFILENAME : @("")}];
+    return [userDefaults stringForKey:CONFIGURATION_PUSH_PROFILENAME];
+}
++ (void)setProfileName:(NSString*)value
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:value forKey:CONFIGURATION_PUSH_PROFILENAME];
+}
+
+#pragma mark - ListID
+static NSString *CONFIGURATION_LISTID = @"Configuration.ListID";
++ (NSInteger)getListID;
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults registerDefaults:@{CONFIGURATION_LISTID : @(0)}];
+    return [userDefaults integerForKey:CONFIGURATION_LISTID];
+}
++ (void)setListID:(NSInteger)value
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:value forKey:CONFIGURATION_LISTID];
 }
 
 @end

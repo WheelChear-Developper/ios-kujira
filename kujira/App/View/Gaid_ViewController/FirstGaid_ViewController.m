@@ -1,18 +1,18 @@
 //
-//  Gaid3_ViewController.m
-//  inui
+//  FirstGaid1_ViewController.m
+//  Skip
 //
 //  Created by SMARTTECNO. on 2014/01/27.
 //  Copyright (c) 2014年 akafune, inc. All rights reserved.
 //
 
-#import "Gaid3_ViewController.h"
+#import "FirstGaid_ViewController.h"
 
-@interface Gaid3_ViewController ()
+@interface FirstGaid_ViewController ()
 
 @end
 
-@implementation Gaid3_ViewController
+@implementation FirstGaid_ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,22 +28,14 @@
     [super viewDidLoad];
     
     // iOS6/7でのレイアウト互換設定
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1){
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     //BackColor
-    self.tableView.backgroundColor = [SetColor setBackGroundColor];
+    self.view.backgroundColor = [SetColor setBackGroundColor];
     
-    // 戻るボタン設定
-    UIButton *Left_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
-    [Left_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
-    [Left_Button setTitle:NSLocalizedString(@"Button_Back",@"") forState:UIControlStateNormal];
-    [Left_Button setTitleColor:[SetColor setButtonCharColor] forState:UIControlStateNormal];
-    [Left_Button addTarget:self action:@selector(btn_Return:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* Left_buttonItem = [[UIBarButtonItem alloc] initWithCustomView:Left_Button];
-    self.navigationItem.leftBarButtonItem = Left_buttonItem;
     // 進むボタン設定
     UIButton *Right_Button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
     [Right_Button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
@@ -71,14 +63,9 @@
     [super viewDidUnload];
 }
 
-- (void)btn_Return:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (void)btn_Next:(id)sender
 {
-    UIViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Gaid4_ViewController"];
+    UIViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Gaid1_ViewController"];
     [self.navigationController pushViewController:viewController animated:YES ];
 }
 
