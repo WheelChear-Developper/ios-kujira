@@ -175,11 +175,13 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
         id json = [NSJSONSerialization JSONObjectWithData:self.mData options:NSJSONReadingAllowFragments error:&error];
         NSMutableArray *jsonParser = (NSMutableArray*)json;
         
-        //        NSLog(@"ユーザー情報取得 = %@",jsonParser);
-        // プロファイルID設定
-        [Configuration setProfileID:[jsonParser valueForKeyPath:@"id"]];
-        // プロファイル名設定
-        [Configuration setProfileName:[jsonParser valueForKeyPath:@"name"]];
+        if([[jsonParser valueForKey:@"id"] longValue]>0){
+            NSLog(@"ユーザー情報取得 = %@",jsonParser);
+            // プロファイルID設定
+            [Configuration setProfileID:[jsonParser valueForKeyPath:@"id"]];
+            // プロファイル名設定
+            [Configuration setProfileName:[jsonParser valueForKeyPath:@"name"]];
+        }
     }
 }
 

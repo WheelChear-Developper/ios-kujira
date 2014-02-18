@@ -93,8 +93,6 @@
     id json = [NSJSONSerialization JSONObjectWithData:self.mData options:NSJSONReadingAllowFragments error:&error];
     NSMutableArray *jsonParser = (NSMutableArray*)json;
     
-    NSLog(@"ユーザー情報取得 = %@",jsonParser);
-    
     // コメント件数設定
     self.lbl_comment.text = [NSString stringWithFormat:@"コメント（ %ld 件）",(long)jsonParser.count];
 }
