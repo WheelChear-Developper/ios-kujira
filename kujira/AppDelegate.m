@@ -131,6 +131,8 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
     // デバイストークン保存(アプリ用)
     [Configuration setDeviceTokenKey:deviceToken];
     
+    NSLog(@"取得デバイストークンキー＿%@",deviceToken);
+    
     // デバイストークン保存(サーバー用)
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://inui.akafune.com/apns_devices"]];
     NSString *requestBody = [@"apns_device[token]=" stringByAppendingString:deviceToken];
