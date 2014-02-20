@@ -278,7 +278,7 @@
         long chk_dt1 = [[RecordDataBox[0] valueForKeyPath:@"service_time"] longValue];
         long chk_dt2 = [[[jsonParser valueForKeyPath:@"created_at"] objectAtIndex:0] longValue];
         if(chk_dt1 == chk_dt2){
-            NSLog(@"同じ");
+            NSLog(@"ニュースデータ変更なし");
             _TotalDataBox = RecordDataBox;
         }else{
             [SqlManager AllDel_ServiceList_listid];

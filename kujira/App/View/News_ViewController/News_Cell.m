@@ -64,6 +64,7 @@
     }
     
     // コメント取得
+    self.lbl_comment.text = @"コメント";
     NSString *URL = [NSString stringWithFormat:@"%@%@%d%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_CommentGet1URL",@""), self.int_commentCount, NSLocalizedString(@"Service_CommentGet2URL",@"")];
     NSURL *URL_STRING = [NSURL URLWithString:URL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL_STRING];

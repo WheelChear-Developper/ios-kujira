@@ -128,20 +128,20 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
 // デバイストークンの登録
 - (void)sendProviderDeviceToken:(NSString *)deviceToken
 {
-    // テスト用
-    deviceToken = @"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx001";
-    
     // デバイストークン保存(アプリ用)
     [Configuration setDeviceTokenKey:deviceToken];
     
     NSLog(@"取得デバイストークンキー＿%@",deviceToken);
     
     // デバイストークン保存(サーバー用)
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://inui.akafune.com/apns_devices"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Service_DomainURL",@""), @"/apns_devices"]]];
     NSString *requestBody = [@"apns_device[token]=" stringByAppendingString:deviceToken];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
-    connection1 = [NSURLConnection connectionWithRequest:request delegate:self];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    // 3秒間スリープする
+    [NSThread sleepForTimeInterval:3.0f];
     
     // デバイストークンからユーザー情報取得
     NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), deviceToken];
