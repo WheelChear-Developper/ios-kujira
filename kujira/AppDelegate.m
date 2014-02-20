@@ -128,6 +128,9 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
 // デバイストークンの登録
 - (void)sendProviderDeviceToken:(NSString *)deviceToken
 {
+    // テスト用
+    deviceToken = @"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx001";
+    
     // デバイストークン保存(アプリ用)
     [Configuration setDeviceTokenKey:deviceToken];
     
