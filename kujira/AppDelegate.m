@@ -140,14 +140,27 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
     [request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
     [NSURLConnection connectionWithRequest:request delegate:self];
     
-    // 3秒間スリープする
-    [NSThread sleepForTimeInterval:3.0f];
-    
     // デバイストークンからユーザー情報取得
-    NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), deviceToken];
-    NSURL *URL_STRING = [NSURL URLWithString:str_URL];
-    NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
-    connection2 = [NSURLConnection connectionWithRequest:dev_request delegate:self];
+    int i = 0;
+    while ([[Configuration getProfileID] isEqualToString:@""]) {
+        if (i == 10) {
+            // 通信エラーメッセージ表示
+            errAlert_exit = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_API_NotConnectTitleMsg",@"")
+                                                       message:nil
+                                                      delegate:self
+                                             cancelButtonTitle:NSLocalizedString(@"Dialog_API_NotConnectMsg",@"")
+                                             otherButtonTitles:nil];
+            [errAlert_exit show];
+            break;
+        }
+        
+        NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), deviceToken];
+        NSURL *URL_STRING = [NSURL URLWithString:str_URL];
+        NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
+        connection2 = [NSURLConnection connectionWithRequest:dev_request delegate:self];
+        
+        i++;
+    }
 }
 
 ///////////////////////// ↓　通信用メソッド　↓　//////////////////////////////
