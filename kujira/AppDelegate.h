@@ -13,9 +13,6 @@
     // ナビゲーションコントローラー制御用
     UINavigationController *naviController;
     UIAlertView *errAlert_exit;
-    
-    NSURLConnection *connection1;
-    NSURLConnection *connection2;
 }
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,retain)NSMutableData *mData;

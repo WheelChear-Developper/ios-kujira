@@ -115,7 +115,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError*)err
         NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), [Configuration getDeviceTokenKey]];
         NSURL *URL_STRING = [NSURL URLWithString:str_URL];
         NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
-        connection2 = [NSURLConnection connectionWithRequest:dev_request delegate:self];
+        [NSURLConnection connectionWithRequest:dev_request delegate:self];
     }
 }
 
@@ -139,28 +139,6 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
     [NSURLConnection connectionWithRequest:request delegate:self];
-    
-    // デバイストークンからユーザー情報取得
-    int i = 0;
-    while ([[Configuration getProfileID] isEqualToString:@""]) {
-        if (i == 10) {
-            // 通信エラーメッセージ表示
-            errAlert_exit = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_API_NotConnectTitleMsg",@"")
-                                                       message:nil
-                                                      delegate:self
-                                             cancelButtonTitle:NSLocalizedString(@"Dialog_API_NotConnectMsg",@"")
-                                             otherButtonTitles:nil];
-            [errAlert_exit show];
-            break;
-        }
-        
-        NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), deviceToken];
-        NSURL *URL_STRING = [NSURL URLWithString:str_URL];
-        NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
-        connection2 = [NSURLConnection connectionWithRequest:dev_request delegate:self];
-        
-        i++;
-    }
 }
 
 ///////////////////////// ↓　通信用メソッド　↓　//////////////////////////////
@@ -181,20 +159,7 @@ didRegisterForRemoteNotificationsWithError:(NSError *)err
 //通信終了時に呼ばれる
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    if(connection2){
-        NSError *error = nil;
-        //値の取得
-        id json = [NSJSONSerialization JSONObjectWithData:self.mData options:NSJSONReadingAllowFragments error:&error];
-        NSMutableArray *jsonParser = (NSMutableArray*)json;
-        
-        if([[jsonParser valueForKey:@"id"] longValue]>0){
-            NSLog(@"ユーザー情報取得 = %@",jsonParser);
-            // プロファイルID設定
-            [Configuration setProfileID:[jsonParser valueForKeyPath:@"id"]];
-            // プロファイル名設定
-            [Configuration setProfileName:[jsonParser valueForKeyPath:@"name"]];
-        }
-    }
+    
 }
 
 //通信エラー時に呼ばれる

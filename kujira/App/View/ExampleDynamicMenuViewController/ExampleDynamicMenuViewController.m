@@ -180,4 +180,77 @@
     NSLog(@"slideMenuDidSlideToLeft");
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    // ユーザー情報取得確認
+    NSString *str_URL = [NSString stringWithFormat:@"%@%@%@",NSLocalizedString(@"Service_DomainURL",@""), NSLocalizedString(@"Service_UserGetURL",@""), [Configuration getDeviceTokenKey]];
+    NSURL *URL_STRING = [NSURL URLWithString:str_URL];
+    NSMutableURLRequest *dev_request = [NSMutableURLRequest requestWithURL:URL_STRING];
+    [NSURLConnection connectionWithRequest:dev_request delegate:self];
+}
+
+///////////////////////// ↓　通信用メソッド　↓　//////////////////////////////
+//通信開始時に呼ばれる
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    //初期化
+    self.mData = [NSMutableData data];
+}
+
+//通信中常に呼ばれる
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    //通信したデータを入れていきます
+    [self.mData appendData:data];
+}
+
+//通信終了時に呼ばれる
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSError *error = nil;
+    //値の取得
+    id json = [NSJSONSerialization JSONObjectWithData:self.mData options:NSJSONReadingAllowFragments error:&error];
+    NSMutableArray *jsonParser = (NSMutableArray*)json;
+    
+    if([[jsonParser valueForKey:@"id"] longValue]>0){
+        NSLog(@"ユーザー情報取得 = %@",jsonParser);
+        // プロファイルID設定
+        [Configuration setProfileID:[jsonParser valueForKeyPath:@"id"]];
+        // プロファイル名設定
+        [Configuration setProfileName:[jsonParser valueForKeyPath:@"name"]];
+    }else{
+        errAlert_exit = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_API_NotConnectTitleMsg",@"")
+                                                   message:nil
+                                                  delegate:self
+                                         cancelButtonTitle:NSLocalizedString(@"Dialog_API_NotConnectMsg",@"")
+                                         otherButtonTitles:nil];
+        [errAlert_exit show];
+    }
+}
+
+//通信エラー時に呼ばれる
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    // 通信エラーメッセージ表示
+    errAlert_exit = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Dialog_API_NotConnectTitleMsg",@"")
+                                               message:nil
+                                              delegate:self
+                                     cancelButtonTitle:NSLocalizedString(@"Dialog_API_NotConnectMsg",@"")
+                                     otherButtonTitles:nil];
+    [errAlert_exit show];
+}
+
+// アラートのボタンが押された時に呼ばれるデリゲート例文
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(alertView == errAlert_exit){
+        switch (buttonIndex) {
+            case 0:
+                exit(0);
+                break;
+        }
+    }
+}
+///////////////////////// ↑　通信用メソッド　↑　//////////////////////////////
+
 @end
