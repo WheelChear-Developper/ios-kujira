@@ -12,7 +12,7 @@
 
 @interface ExampleDynamicMenuViewController :SASlideMenuViewController
 {
-    UIAlertView *errAlert_exit;
+//    UIAlertView *errAlert_exit;
 }
 -(void) tap:(id) sender;
 @property (nonatomic,retain)NSMutableData *mData;
