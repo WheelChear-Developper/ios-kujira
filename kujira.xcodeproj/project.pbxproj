@@ -1054,7 +1054,7 @@
 		D14205B118A1DAE3007D1C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kujira/kujira-Prefix.pch";
 				INFOPLIST_FILE = "kujira/kujira-Info.plist";
@@ -1067,7 +1067,7 @@
 		D14205B218A1DAE3007D1C5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: akafune, Inc. (28UP93TVV6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kujira/kujira-Prefix.pch";
 				INFOPLIST_FILE = "kujira/kujira-Info.plist";
